@@ -20,8 +20,6 @@ class Produk{
     public function getLabel(){
         return "$this->penulis, $this->penerbit";
     }
-    //Buku : PHP | Sandika, Gramedia (Rp. 20000) - 100 Halaman
-    //Game : Mobile Legend | Montoon, Playstore (Rp. 300000) ~ 50 Jam
     public function getInfoProduk(){
         // $str = "{$this->tipe} : {$this->judul} | {$this->getLabel()} (Rp. $this->harga) ";
         // if ($this->tipe == "Buku") {
