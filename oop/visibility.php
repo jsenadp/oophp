@@ -1,4 +1,3 @@
-
 <?php
 class Produk{
     public $judul,
