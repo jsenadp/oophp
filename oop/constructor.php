@@ -26,4 +26,3 @@
   echo "Buku : ".$produk1->getLabel();
   echo "<br>";
   echo "Game : ".$produk2->getLabel();
-?>
