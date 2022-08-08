@@ -21,16 +21,16 @@ class contoh{
     }
 }
 
-$obj = new contoh;
-echo $obj->halo();
-echo $obj->halo();
-echo $obj->halo();
-echo "<hr>";
-
 $obj1 = new contoh;
 echo $obj1->halo();
 echo $obj1->halo();
 echo $obj1->halo();
+echo "<hr>";
+
+$obj1 = new contoh;
+echo $obj2->halo();
+echo $obj2->halo();
+echo $obj2->halo();
 
 //menggunakan static akan meneruskan angka
 //tidak menggunakan static akan kembali ke angka 1 di tiap obj
