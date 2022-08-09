@@ -103,8 +103,18 @@ class Game extends Produk{
 }
 
 class cetakInfoProduk{
-    public function cetak($produk){
-        $str = "Judul : {$produk->judul} | Penulis : {$produk->penulis}, Penerbit : {$produk->penerbit}, Harga : {$produk->harga}";
+    public $daftarProduk = [];
+
+    public function tambahProduk (Produk $produk){
+        $this->daftarProduk[] = $produk;
+    }
+
+    public function cetak(){
+        $str = "DAFTAR PRODUK : <br>";
+
+        foreach ($this->daftarProduk as $p){
+            $str .= "- {$p->getInfoProduk()} <br>";
+        }
         return $str;
     }
 }
@@ -112,5 +122,8 @@ class cetakInfoProduk{
 $produk1 = new Buku("PHP", "Sandika", "Gramedia", 20000, 100);
 $produk2 = new Game("Mobile Legend", "Montoon", "Playstore", 300000, 50);
 
-
+$cetakProduk = new cetakInfoProduk();
+$cetakProduk->tambahProduk($produk1);
+$cetakProduk->tambahProduk($produk2);
+echo $cetakProduk->cetak();
 
